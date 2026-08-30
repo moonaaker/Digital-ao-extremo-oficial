@@ -1,0 +1,796 @@
+/* =========================
+   CORES DO SITE
+========================= */
+
+:root {
+    --verde-escuro: #014D41;
+    --verde: #00C901;
+    --laranja: #FE5E00;
+    --amarelo: #FFAB00;
+    --creme: #FFE6B3;
+
+    --branco: #fffaf0;
+    --texto: #17352f;
+    --cinza: #64716d;
+}
+
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--branco);
+    color: var(--texto);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   BARRA DE CORES
+========================= */
+
+.cores {
+    height: 8px;
+    display: flex;
+}
+
+.cores span {
+    flex: 1;
+}
+
+.cores span:nth-child(1) {
+    background: var(--verde-escuro);
+}
+
+.cores span:nth-child(2) {
+    background: var(--verde);
+}
+
+.cores span:nth-child(3) {
+    background: var(--laranja);
+}
+
+.cores span:nth-child(4) {
+    background: var(--amarelo);
+}
+
+.cores span:nth-child(5) {
+    background: var(--creme);
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+header {
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #ddd;
+}
+
+nav {
+    max-width: 1200px;
+    min-height: 75px;
+    margin: auto;
+    padding: 15px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.logo {
+    color: var(--verde-escuro);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo strong {
+    margin-left: 8px;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+    font-weight: bold;
+}
+
+.links a:hover {
+    color: var(--laranja);
+}
+
+.botoes {
+    display: flex;
+    gap: 8px;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 11px 18px;
+
+    border-radius: 10px;
+
+    border: 2px solid transparent;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.laranja {
+    background: var(--laranja);
+    color: white;
+}
+
+.verde {
+    background: var(--verde);
+    color: #063d09;
+}
+
+.contorno {
+    background: transparent;
+    border-color: var(--verde-escuro);
+    color: var(--verde-escuro);
+}
+
+.hero .contorno {
+    color: white;
+    border-color: white;
+}
+
+
+/* =========================
+   BOTÃO MENU CELULAR
+========================= */
+
+.menu {
+    display: none;
+
+    border: 0;
+
+    background: var(--verde-escuro);
+
+    color: white;
+
+    padding: 8px 12px;
+
+    border-radius: 8px;
+}
+
+
+/* =========================
+   TELA INICIAL
+========================= */
+
+.hero {
+    min-height: 550px;
+
+    padding: 70px 8%;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    align-items: center;
+
+    gap: 50px;
+
+    background: var(--verde-escuro);
+
+    color: white;
+}
+
+.hero small,
+.titulo small,
+.perfil-info small {
+    color: var(--amarelo);
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 6vw, 75px);
+
+    line-height: 1;
+
+    margin: 20px 0;
+}
+
+.hero h1 strong {
+    color: var(--creme);
+}
+
+.hero p {
+    max-width: 650px;
+
+    color: #e0f1eb;
+
+    margin-bottom: 25px;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   VAGA DESTAQUE
+========================= */
+
+.vaga-destaque {
+    background: var(--creme);
+
+    color: var(--texto);
+
+    padding: 25px;
+
+    border-radius: 22px;
+
+    box-shadow: 0 15px 40px #0004;
+}
+
+.topo-vaga {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+}
+
+.topo-vaga span,
+.rodape-vaga strong {
+    background: var(--verde);
+
+    padding: 5px 9px;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+}
+
+.mini-vaga,
+.card-vaga,
+.candidatura {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 15px;
+}
+
+.mini-vaga h3 {
+    margin: 8px 0;
+}
+
+
+/* =========================
+   TAGS
+========================= */
+
+.tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 12px;
+}
+
+.tags span {
+    background: #eaf5ed;
+
+    color: var(--verde-escuro);
+
+    padding: 5px 8px;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+section {
+    padding: 75px 8%;
+}
+
+.titulo {
+    max-width: 700px;
+
+    margin-bottom: 35px;
+}
+
+.titulo h2 {
+    color: var(--verde-escuro);
+
+    font-size: 42px;
+
+    margin: 5px 0 10px;
+}
+
+.titulo p {
+    color: var(--cinza);
+}
+
+
+/* =========================
+   PESQUISA
+========================= */
+
+.pesquisa {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #d5dfdb;
+
+    border-radius: 9px;
+
+    font: inherit;
+}
+
+.pesquisa input {
+    flex: 1;
+}
+
+
+/* =========================
+   VAGAS
+========================= */
+
+.vagas {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.card-vaga {
+    border: 1px solid #e2e9e6;
+
+    box-shadow: 0 5px 20px #014d4112;
+}
+
+.empresa {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.icone {
+    width: 43px;
+    height: 43px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: var(--verde-escuro);
+
+    color: var(--creme);
+
+    border-radius: 10px;
+
+    font-weight: bold;
+}
+
+.card-vaga > p {
+    color: var(--cinza);
+
+    margin: 15px 0;
+}
+
+.rodape-vaga {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 20px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #eee;
+}
+
+
+/* =========================
+   COMO FUNCIONA
+========================= */
+
+.creme {
+    background: var(--creme);
+}
+
+.passos {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.passos div {
+    background: #ffffffaa;
+
+    padding: 25px;
+
+    border-radius: 15px;
+}
+
+.passos b {
+    display: grid;
+
+    place-items: center;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: var(--laranja);
+
+    color: white;
+
+    margin-bottom: 15px;
+}
+
+.passos h3 {
+    color: var(--verde-escuro);
+
+    margin-bottom: 8px;
+}
+
+.passos p {
+    color: var(--cinza);
+}
+
+
+/* =========================
+   PERFIL
+========================= */
+
+.perfil {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+.perfil-info {
+    background: var(--verde-escuro);
+
+    color: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+}
+
+.perfil-info h2 {
+    color: var(--creme);
+
+    font-size: 40px;
+
+    margin: 15px 0;
+}
+
+.perfil-info ul {
+    list-style: none;
+
+    margin-top: 25px;
+}
+
+.perfil-info li {
+    background: #ffffff12;
+
+    padding: 11px;
+
+    margin: 8px 0;
+
+    border-radius: 8px;
+}
+
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.formulario {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px #014d4114;
+}
+
+.formulario h2 {
+    color: var(--verde-escuro);
+
+    margin-bottom: 20px;
+}
+
+.formulario label {
+    display: block;
+
+    font-weight: bold;
+
+    color: var(--verde-escuro);
+
+    margin: 12px 0 6px;
+}
+
+.formulario textarea {
+    min-height: 100px;
+
+    resize: vertical;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   CURSOS
+========================= */
+
+.verde-escuro {
+    background: var(--verde-escuro);
+}
+
+.verde-escuro .titulo h2 {
+    color: var(--creme);
+}
+
+.verde-escuro .titulo p {
+    color: #d7eee7;
+}
+
+.cursos {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.cursos div {
+    background: var(--creme);
+
+    padding: 25px;
+
+    border-radius: 15px;
+}
+
+.cursos div:nth-child(2) {
+    background: var(--amarelo);
+}
+
+.cursos div:nth-child(3) {
+    background: var(--verde);
+}
+
+.cursos span {
+    font-size: 30px;
+}
+
+.cursos h3 {
+    color: var(--verde-escuro);
+
+    margin: 10px 0;
+}
+
+
+/* =========================
+   CANDIDATURAS
+========================= */
+
+.candidaturas {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.candidatura {
+    box-shadow: 0 5px 20px #014d4112;
+}
+
+.status {
+    color: #16731e;
+
+    font-weight: bold;
+
+    margin-top: 15px;
+}
+
+
+/* =========================
+   CHAMADA FINAL
+========================= */
+
+.chamada {
+    text-align: center;
+
+    background: linear-gradient(
+        120deg,
+        var(--laranja),
+        var(--amarelo)
+    );
+
+    color: var(--verde-escuro);
+}
+
+.chamada h2 {
+    font-size: 45px;
+}
+
+.chamada p {
+    margin: 15px 0 25px;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background: #023b33;
+
+    color: white;
+
+    padding: 40px 8%;
+}
+
+footer h2 {
+    color: var(--creme);
+}
+
+footer p {
+    color: #c8dfd8;
+
+    margin-top: 8px;
+}
+
+
+/* =========================
+   TABLET / CELULAR
+========================= */
+
+@media (max-width: 900px) {
+
+    .links {
+        display: none;
+
+        position: absolute;
+
+        top: 75px;
+
+        left: 15px;
+
+        right: 15px;
+
+        padding: 20px;
+
+        background: white;
+
+        flex-direction: column;
+
+        border-radius: 12px;
+
+        box-shadow: 0 10px 30px #0002;
+    }
+
+    .links.aberto {
+        display: flex;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .botoes {
+        display: none;
+    }
+
+    .hero,
+    .perfil {
+        grid-template-columns: 1fr;
+    }
+
+    .vagas,
+    .cursos {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .passos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    section,
+    .hero {
+        padding: 55px 18px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .vagas,
+    .cursos,
+    .passos,
+    .candidaturas {
+        grid-template-columns: 1fr;
+    }
+
+    .pesquisa {
+        flex-direction: column;
+    }
+
+    .pesquisa .btn {
+        width: 100%;
+    }
+
+    .chamada h2 {
+        font-size: 35px;
+    }
+}
